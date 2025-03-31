@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ASS-.#####",
+ "creation": "2025-03-31 15:44:23.659202",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ijus",
+  "assessment_date",
+  "reference_number",
+  "column_break_vhbp",
+  "score",
+  "skill_code",
+  "column_break_dmol",
+  "result",
+  "grade",
+  "trainee_information_section",
+  "trainee_id",
+  "column_break_umqy",
+  "trainee_id_type",
+  "column_break_qpbd",
+  "trainee_full_name",
+  "course_information_section",
+  "course_title",
+  "course_run_id",
+  "column_break_aesu",
+  "course_reference_number",
+  "column_break_hain",
+  "course_start_date",
+  "course_end_date",
+  "enrolment_details_section",
+  "enrolment_reference_number",
+  "training_partner_details_section",
+  "training_partner_name",
+  "column_break_qqjo",
+  "training_partner_uen",
+  "column_break_hjdb",
+  "training_partner_code",
+  "conferring_institute_details_section",
+  "conferring_institute_name",
+  "column_break_zugq",
+  "conferring_institute_uen",
+  "column_break_tcgf",
+  "conferring_institute_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ijus",
+   "fieldtype": "Section Break",
+   "label": "Assessment Details"
+  },
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Assessment Date "
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Data",
+   "label": "Score "
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade "
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "label": "Result "
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number "
+  },
+  {
+   "fieldname": "skill_code",
+   "fieldtype": "Data",
+   "label": "Skill Code "
+  },
+  {
+   "fieldname": "trainee_information_section",
+   "fieldtype": "Section Break",
+   "label": "Trainee Information"
+  },
+  {
+   "fieldname": "trainee_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trainee Id "
+  },
+  {
+   "fieldname": "trainee_id_type",
+   "fieldtype": "Data",
+   "label": "Trainee Id Type "
+  },
+  {
+   "fieldname": "trainee_full_name",
+   "fieldtype": "Data",
+   "label": "Trainee Full Name "
+  },
+  {
+   "fieldname": "course_information_section",
+   "fieldtype": "Section Break",
+   "label": "Course Information"
+  },
+  {
+   "fieldname": "course_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Title "
+  },
+  {
+   "fieldname": "course_reference_number",
+   "fieldtype": "Data",
+   "label": "Course Reference Number "
+  },
+  {
+   "fieldname": "course_run_id",
+   "fieldtype": "Data",
+   "label": "Course Run Id "
+  },
+  {
+   "fieldname": "course_start_date",
+   "fieldtype": "Data",
+   "label": "Course Start Date "
+  },
+  {
+   "fieldname": "course_end_date",
+   "fieldtype": "Data",
+   "label": "Course End Date "
+  },
+  {
+   "fieldname": "enrolment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Enrolment Details"
+  },
+  {
+   "fieldname": "enrolment_reference_number",
+   "fieldtype": "Data",
+   "label": "Enrolment Reference Number "
+  },
+  {
+   "fieldname": "training_partner_details_section",
+   "fieldtype": "Section Break",
+   "label": "Training Partner Details"
+  },
+  {
+   "fieldname": "training_partner_name",
+   "fieldtype": "Data",
+   "label": "Training Partner Name "
+  },
+  {
+   "fieldname": "training_partner_uen",
+   "fieldtype": "Data",
+   "label": "Training Partner Uen "
+  },
+  {
+   "fieldname": "training_partner_code",
+   "fieldtype": "Data",
+   "label": "Training Partner Code "
+  },
+  {
+   "fieldname": "conferring_institute_details_section",
+   "fieldtype": "Section Break",
+   "label": "Conferring Institute Details"
+  },
+  {
+   "fieldname": "conferring_institute_name",
+   "fieldtype": "Data",
+   "label": "Conferring Institute Name "
+  },
+  {
+   "fieldname": "conferring_institute_uen",
+   "fieldtype": "Data",
+   "label": "Conferring Institute Uen "
+  },
+  {
+   "fieldname": "conferring_institute_code",
+   "fieldtype": "Data",
+   "label": "Conferring Institute Code "
+  },
+  {
+   "fieldname": "column_break_vhbp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dmol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_umqy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qpbd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_aesu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hain",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qqjo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hjdb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zugq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tcgf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-31 18:15:21.762762",
+ "modified_by": "Administrator",
+ "module": "Assessment Sync",
+ "name": "Assessment",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
