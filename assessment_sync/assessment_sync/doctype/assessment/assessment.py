@@ -38,4 +38,23 @@ def _get_assessments(request_data):
     except Exception as e:
         frappe.log_error(message=frappe.get_traceback(), title="External API Error")
         frappe.throw(f"An error occurred: {str(e)}")
+        
+@frappe.whitelist()
+def create_assessments(request_data):
+    request_data = json.loads(request_data)
+    if not request_data:
+        frappe.throw("No data provided.")
+
+    for assessment_data in request_data:
+        doc = frappe.get_doc({
+            "doctype": "Assessment",
+            "reference_number": assessment_data.get("referenceNumber"),
+            "skill_code": assessment_data.get("skillCode"),
+            "trainee_full_name":assessment_data.get("trainingPartner_name"),
+            "trainee_id":assessment_data.get("trainingPartner_code"),
+            "trainee_id_type":assessment_data.get("trainingPartner_uen")
+            # "course_title":assessment_data.get("course_title")
+            
+        })
+        doc.insert(ignore_permissions=True)
      

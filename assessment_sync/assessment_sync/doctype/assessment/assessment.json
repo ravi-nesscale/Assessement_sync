@@ -53,7 +53,6 @@
   {
    "fieldname": "assessment_date",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Assessment Date "
   },
   {
@@ -74,11 +73,13 @@
   {
    "fieldname": "reference_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Reference Number "
   },
   {
    "fieldname": "skill_code",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Skill Code "
   },
   {
@@ -100,6 +101,7 @@
   {
    "fieldname": "trainee_full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Trainee Full Name "
   },
   {
@@ -110,7 +112,6 @@
   {
    "fieldname": "course_title",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Course Title "
   },
   {
@@ -226,7 +227,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-31 18:15:21.762762",
+ "modified": "2025-04-01 14:50:22.659385",
  "modified_by": "Administrator",
  "module": "Assessment Sync",
  "name": "Assessment",
