@@ -54,22 +54,17 @@ def create_assessments(request_data):
             "training_partner_name":assessment_data.get("trainingPartner_name"),
             "training_partner_code":assessment_data.get("trainingPartner_code"),
             "training_partner_uen": assessment_data.get("trainingPartner_uen"),
-            
             "conferring_institute_name":assessment_data.get("conferring_institute_name"),
             "conferring_institute_code":assessment_data.get("conferring_institute_code"),
             "conferring_institute_uen":assessment_data.get("conferring_institute_uen"),
-            
             "result":assessment_data.get("result"),
             "score":assessment_data.get("score"),
             "grade":assessment_data.get("grade"),
-            
             "course_title": assessment_data.get("course_title"),
             "course_reference_number":assessment_data.get("course_reference_number"),
             "course_run_id":assessment_data.get("course_run_id"),
             "course_start_date":assessment_data.get("course_run_start_date"),
             "course_end_date": assessment_data.get("course_run_end_date"),
-
-            
             "trainee_id": assessment_data.get("trainee_id"),
             "trainee_id_type": assessment_data.get("trainee_id_type"),
             "trainee_full_name": assessment_data.get("trainee_full_name"),
