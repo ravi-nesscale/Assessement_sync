@@ -69,11 +69,31 @@ function assessment_sync_dialog() {
                 in_place_edit: false,
                 fields: [
                     { fieldname: "id", fieldtype: "Data", label: "ID", read_only: 1, in_list_view: 1 },
-                    { fieldname: "referenceNumber", fieldtype: "Data", label: "ENR Reference Number", read_only: 1, in_list_view: 1 },
+                    { fieldname: "id_referenceNumber", fieldtype: "Data", label: "ID Reference Number", read_only: 1, in_list_view: 1 },
+                    { fieldname: "enr_referenceNumber", fieldtype: "Data", label: "ENR Reference Number", read_only: 1, in_list_view: 1 },
                     { fieldname: "skillCode", fieldtype: "Data", label: "Skill Code", read_only: 1, in_list_view: 1 },
                     { fieldname: "trainingPartner_name", fieldtype: "Data", label: "Training Partner Name", read_only: 1, in_list_view: 1 },
                     { fieldname: "trainingPartner_code", fieldtype: "Data", label: "Training Partner Code", read_only: 1, in_list_view: 1 },
                     { fieldname: "trainingPartner_uen", fieldtype: "Data", label: "Training Partner Uen", read_only: 1, in_list_view: 1 },
+                    // { fieldname: "enrolment_referenceNumber", fieldtype: "Data", label: "Enrolment ReferenceNumber", read_only: 1, in_list_view: 1 },
+                    { fieldname: "result", fieldtype: "Data", label: "Result", read_only: 1, in_list_view: 1 },
+                    { fieldname: "score", fieldtype: "Data", label: "Score", read_only: 1, in_list_view: 1 },
+                    { fieldname: "grade", fieldtype: "Data", label: "Grade", read_only: 1, in_list_view: 1 },
+                    { fieldname: "assessment_date", fieldtype: "Data", label: "Assessment Date", read_only: 1, in_list_view: 1 },
+                    { fieldname: "conferring_institute_uen", fieldtype: "Data", label: "Conferring Institute UEN", read_only: 1, in_list_view: 1 },
+                    { fieldname: "conferring_institute_code", fieldtype: "Data", label: "Conferring Institute Code", read_only: 1, in_list_view: 1 },
+                    { fieldname: "conferring_institute_name", fieldtype: "Data", label: "Conferring Institute Name", read_only: 1, in_list_view: 1 },
+
+                    { fieldname: "trainee_id", fieldtype: "Data", label: "Trainee ID", read_only: 1, in_list_view: 1 },
+                    { fieldname: "trainee_id_type", fieldtype: "Data", label: "Trainee ID Type", read_only: 1, in_list_view: 1 },
+                    { fieldname: "trainee_full_name", fieldtype: "Data", label: "Trainee Full Name", read_only: 1, in_list_view: 1 },
+
+                    { fieldname: "course_run_id", fieldtype: "Data", label: "Course Run ID", read_only: 1, in_list_view: 1 },
+                    { fieldname: "course_run_start_date", fieldtype: "Data", label: "Course Run Start Date", read_only: 1, in_list_view: 1 },
+                    { fieldname: "course_run_end_date", fieldtype: "Data", label: "Course Run End Date", read_only: 1, in_list_view: 1 },
+                    { fieldname: "course_title", fieldtype: "Data", label: "Course Title", read_only: 1, in_list_view: 1 },
+                    { fieldname: "course_reference_number", fieldtype: "Data", label: "Course Reference Number", read_only: 1, in_list_view: 1 },
+                    
                 ]
             }
         ],
@@ -119,11 +139,32 @@ function assessment_sync_dialog() {
                     if (r.message && r.message.data && Array.isArray(r.message.data)) {
                         let table_data = r.message.data.map(item => ({
                             id: item.referenceNumber || "",
-                            referenceNumber: item.enrolment?.referenceNumber || "",
+
+                            enr_referenceNumber: item.enrolment?.referenceNumber || "",
                             skillCode: item.skillCode || "",
                             trainingPartner_name: item.trainingPartner?.name || "",
                             trainingPartner_code: item.trainingPartner?.code || "",
                             trainingPartner_uen: item.trainingPartner?.uen || "",
+                            conferring_institute_name: item.conferringInstitute?.name || "",
+                            conferring_institute_code: item.conferringInstitute?.code || "",
+                            conferring_institute_uen: item.conferringInstitute?.uen || "",
+
+                            trainee_id: item.trainee?.id || "",
+                            trainee_id_type: item.trainee?.idType?.type || "",  
+                            trainee_full_name: item.trainee?.fullName || "",
+
+                            course_title: item.course?.title || "",
+                            course_reference_number: item.course?.referenceNumber || "",
+                            course_run_id: item.course?.run?.id|| "",
+                            course_run_start_date: item.course?.run?.startDate|| "",
+                            course_run_end_date: item.course?.run?.endDate|| "",
+                            grade: item.grade || "",
+                            result: item.result || "",
+                            score: item.score || "",
+                            score: item.score || "",
+                            id_referenceNumber: item.referenceNumber || "",
+                            assessment_date: item.assessmentDate || "",
+
                             selected: 0  // Adding checkbox field to select rows
                         }));
 
@@ -160,11 +201,32 @@ function assessment_sync_dialog() {
 
         let selected_data = selected_rows.map(row => ({
             id: row.id,
-            referenceNumber: row.referenceNumber,
+            id_referenceNumber: row.id_referenceNumber,
+            enr_referenceNumber: row.enr_referenceNumber,
             skillCode: row.skillCode,
             trainingPartner_name: row.trainingPartner_name,
             trainingPartner_code: row.trainingPartner_code,
             trainingPartner_uen: row.trainingPartner_uen,
+            trainee_id: row.trainee_id,
+            trainee_id_type: row.trainee_id_type,
+            trainee_full_name: row.trainee_full_name,
+            conferring_institute_name: row.conferring_institute_name,
+            conferring_institute_code: row.conferring_institute_code,
+            conferring_institute_uen: row.conferring_institute_uen,
+            score:row.score,
+
+            course_title: row.course_title,
+            course_reference_number: row.course_reference_number,
+            course_run_id:row.course_run_id,
+            course_run_start_date: row.course_run_start_date,
+            course_run_end_date: row.course_run_end_date,
+
+            result:row.result,
+            assessment_date:row.assessment_date,
+            grade: row.grade,
+            // enrolment_referenceNumber:row.enrolment_referenceNumber
+            
+
         }));
 
         creating_assessments(selected_data);  // Call the function to create assessments
@@ -182,11 +244,31 @@ function assessment_sync_dialog() {
 
         let all_data = table_field.map(row => ({
             id: row.id,
-            referenceNumber: row.referenceNumber,
+            id_referenceNumber: row.id_referenceNumber,
+            enr_referenceNumber: row.enr_referenceNumber,
             skillCode: row.skillCode,
             trainingPartner_name: row.trainingPartner_name,
             trainingPartner_code: row.trainingPartner_code,
             trainingPartner_uen: row.trainingPartner_uen,
+            conferring_institute_name: row.conferring_institute_name,
+            conferring_institute_code: row.conferring_institute_code,
+            conferring_institute_uen: row.conferring_institute_uen,
+
+            course_title: row.course_title,
+            course_reference_number: row.course_reference_number,
+            course_run_id:row.course_run_id,
+            course_run_start_date: row.course_run_start_date,
+            course_run_end_date: row.course_run_end_date,
+
+
+            score:row.score,
+            trainee_id: row.trainee_id,
+            trainee_id_type: row.trainee_id_type,
+            trainee_full_name: row.trainee_full_name,
+            result:row.result,
+            grade: row.grade,
+            assessment_date:row.assessment_date,
+
         }));
         creating_assessments(all_data);  // Call the function to create assessments
     });

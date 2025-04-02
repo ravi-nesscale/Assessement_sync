@@ -52,7 +52,7 @@
   },
   {
    "fieldname": "assessment_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Assessment Date "
   },
   {
@@ -227,7 +227,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-01 14:50:22.659385",
+ "modified": "2025-04-02 13:06:47.733217",
  "modified_by": "Administrator",
  "module": "Assessment Sync",
  "name": "Assessment",
